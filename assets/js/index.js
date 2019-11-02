@@ -32,63 +32,61 @@ $( document ).ready(function() {
 var projects = [
   {
     id: "Proyect 1",
-    title: "Títul1",
-    quoteTitle: "Título quote proyecto1",
-    paragraphOne: "Lorem ipsum dolor  ex ea commodo consequat.",
-    paragraphTwo: "Lorem ipsum dolor sit amet, consectetur adipiscin Lorem ipsum olor sit amet, consectetur adipiscin",
-    buttonText: "button Text1",
+    title: "Movistar Comparte",
+    quoteTitle: "UX · UI",
+    paragraphOne: "Proyecto para todos los medios de difusión en streaming",
+    paragraphTwo: "Comparte tu pantalla con un invitado y mirar el contenido juntos",
+    buttonRef: "VER PROYECTO",
     currentSlide: "01",
-    imgUrl: "./assets/img/retrato-escritorio-2.gif"
+    imgUrl: "./assets/img/portada-comparte.jpg"
   },
   {
     id: "Proyect 2",
-    title: "Títul2",
-    quoteTitle: "Título quote proyecto2",
-    paragraphOne: "Lorem ipsum dolor  ex ea commodo consequat.",
-    paragraphTwo: "Lorem ipsum dolor sit amet, consectetur adipiscin Lorem ipsum olor sit amet, consectetur adipiscin",
-    buttonText: "button Text2",
+    title: "Rediseño ComicCon Madrid",
+    quoteTitle: "UX · UI",
+    paragraphOne: "Landing page para promocionar el evento ComicCon Madrid 2020",
+    paragraphTwo: "",
+    buttonRef: "VER PROYECTO",
     currentSlide: "02",
-    imgUrl: "./assets/img/prueba-fondo-home.png"
+    imgUrl: "./assets/img/portada-comiccon.png"
   },
   {
     id: "Proyect 3",
-    title: "Títul3",
-    quoteTitle: "Título quote proyecto3",
-    paragraphOne: "Lorem ipsum dolor  ex ea commodo consequat.",
-    paragraphTwo: "Lorem ipsum dolor sit amet, consectetur adipiscin Lorem ipsum olor sit amet, consectetur adipiscin",
-    buttonText: "button Text3",
+    title: "GEAº Magazine",
+    quoteTitle: "UX · UI",
+    paragraphOne: "Una revista digital dirigida a todas las personas que aprecian la cultura, el medio ambiente y la vida sana",
+    buttonRef: "VER PROYECTO",
     currentSlide: "03",
-    imgUrl: ""
+    imgUrl: "./assets/img/portada-gea.png"
   },
   {
     id: "Proyect 4",
-    title: "Títul4",
-    quoteTitle: "Título quote proyecto4",
-    paragraphOne: "Lorem ipsum dolor  ex ea commodo consequat.",
-    paragraphTwo: "Lorem ipsum dolor sit amet, consectetur adipiscin Lorem ipsum olor sit amet, consectetur adipiscin",
-    buttonText: "button Text4",
+    title: "Game Camp Online",
+    quoteTitle: "UX",
+    paragraphOne: "Campamento bilingüe durante las vacaciones de verano, con una temática gaming para vivir una experiencia entretenida y educativa",
+    paragraphTwo: "",
+    buttonRef: "VER PROYECTO",
     currentSlide: "04",
-    imgUrl: ""
+    imgUrl: "./assets/img/works/portada-gamecamp.jpeg"
   },
   {
     id: "Proyect 5",
-    title: "Títul5",
-    quoteTitle: "Título quote proyecto5",
-    paragraphOne: "Lorem ipsum dolor  ex ea commodo consequat.",
-    paragraphTwo: "Lorem ipsum dolor sit amet, consectetur adipiscin Lorem ipsum olor sit amet, consectetur adipiscin",
-    buttonText: "button Text5",
+    title: "Mi Portfolio, mi imágen",
+    quoteTitle: "UI · CODE",
+    paragraphOne: "Portfolio web, pensando desde la marca hasta el código. ",
+    buttonRef: "VER PROYECTO",
     currentSlide: "05",
-    imgUrl: ""
+    imgUrl: "./assets/img/works/portada-gamecamp.jpeg"
   },
   {
     id: "Proyect 6",
-    title: "Títul6",
-    quoteTitle: "Título quote proyecto5",
-    paragraphOne: "Lorem ipsum dolor  ex ea commodo consequat.",
-    paragraphTwo: "Lorem ipsum dolor sit amet, consectetur adipiscin Lorem ipsum olor sit amet, consectetur adipiscin",
-    buttonText: "button Text5",
+    title: "Starty App",
+    quoteTitle: "UX · UI",
+    paragraphOne: "Proyecto final del bootcamp de Ironhcak",
+    paragraphTwo: "Seleccionado para ir al HackShow del 2019",
+    buttonRef: "VER PROYECTO",
     currentSlide: "06",
-    imgUrl: ""
+    imgUrl: "./assets/img/works/portada-gamecamp.jpeg"
   }
 ]
 
@@ -121,7 +119,7 @@ $( document ).ready(function() {
     var title = textDiv.find(".title-project")
     var firstParagraph = textDiv.find(".text-project-one")
     var secondParagraph = textDiv.find(".text-project-two")
-    var button = textDiv.find("a p")
+    var button = $("#see-project-button")
     var currentTextSlide = $("#current-slide-text")
     var cardGifProject = $(".trabajos-contenido-izquierda")
     var projectsTextTotal = $("#total-slides-count")
@@ -141,7 +139,7 @@ $( document ).ready(function() {
     title.text(projects[currentSlide].title)
     firstParagraph.text(projects[currentSlide].paragraphOne)
     secondParagraph.text(projects[currentSlide].paragraphTwo)
-    button.text(projects[currentSlide].buttonText)
+    button.attr("href", projects[currentSlide].buttonRef)
   }
 
   function toggleFade (){
@@ -173,8 +171,8 @@ $( document ).ready(function() {
   function changeModalContent(target) {
     var ref = target.getAttribute("data-ref")
     var image = target.getAttribute("data-img")
-    var modalImage = $(`${ref} .project-modal-content > div`)
-    modalImage.css("background-color", image ? image : "yellow")
+    var modalImage = $(`${ref} #image-modal`)
+    modalImage.attr("src", `${image}`)
   }
 
 })

@@ -1,3 +1,54 @@
+.project-1{
+  background: url('../img/ilustrations/1.jpg');
+}
+.project-2{
+  background: url('../img/ilustrations/2.jpg');
+}
+.project-3{
+  background: url('../img/ilustrations/3.jpg');
+}
+.project-4{
+  background: url('../img/ilustrations/4.jpg');
+}
+.project-5{
+  background: url('../img/ilustrations/5.jpg');
+}
+.project-6{
+  background: url('../img/ilustrations/6.jpg');
+}
+.project-7{
+  background: url('../img/ilustrations/7.jpg');
+}
+.project-8{
+  background: url('../img/ilustrations/8.jpg');
+}
+.project-9{
+  background: url('../img/ilustrations/9.jpg');
+}
+
+#image-modal {
+  max-height: 85vh;
+  max-width: 90vw;
+}
+
+.c-white {
+  color: white!important;
+}
+
+.cursor-pointer{
+  cursor: pointer !important;
+}
+
+.project-card {
+  max-width: 300px !important;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
 /* MI CSS*/
 .modal{
   position: fixed;
@@ -10,8 +61,8 @@
 .close-modal-icon{
   position: absolute;
   top: 0;
-  right: 0;
-  margin-top: -45px;
+  right: -35px;
+  margin-top: -35px;
   font-size: 27px;
 }
 
@@ -26,12 +77,15 @@
 
 .div-image-modal{
   margin: 0px 25px; 
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  height: 100%;
+  height: 70%;
   max-height: 600px;
   display: flex;
   position: relative;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .div-image-modal-text{
@@ -62,10 +116,15 @@ box-shadow: 10px 10px 0px 0px rgba(127,127,127,1);
 
 /* DETAILS PROJECTS */
 
+.title-project {
+  line-height: 2.3rem;
+}
+
 #header-project-one{
   width: 100%;
-  height: 300px;
+  height: 200px;
   background-color: grey;
+  paddingtop: 50px;
 }
 
 .detail-project-subtitle{
@@ -76,7 +135,7 @@ box-shadow: 10px 10px 0px 0px rgba(127,127,127,1);
 }
 
 .detail-project-title{
-  color: #263366;
+  color: rgb(35, 28, 59);
   font-size: 60px;
   font-weight: 800;
   line-height: 60px;
@@ -153,12 +212,19 @@ box-shadow: 10px 10px 0px 0px rgba(127,127,127,1);
 }
 
 .trabajos-info-boton {
-  color: #af9054;
+  font-size: 14px;
+  color: #e9465f;
+  letter-spacing: 3px;
   font-family: "Montserrat";
   cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 900;
 }
+
+
+
+
+
 
 .trabajos-info-boton img {
   height: 14px;
@@ -167,10 +233,10 @@ box-shadow: 10px 10px 0px 0px rgba(127,127,127,1);
 }
 
 .trabajos-cuadro-categoria {
-  font-size: 14px;
-  color: #af9054;
+  font-size: 12px;
+  color: #e9465f;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .colorfondo-stereo {
@@ -194,6 +260,7 @@ box-shadow: 10px 10px 0px 0px rgba(127,127,127,1);
 }
 
 .trabajos-info-izquierda {
+  height: 380px;
   position: absolute;
   right: 0;
   top: 50%;
@@ -291,21 +358,39 @@ box-shadow: 10px 10px 0px 0px rgba(127,127,127,1);
 }
 
 .icon-logo-linkedin:hover {
-  color: blue;
+  color: #e9465f;
 }
 
 .icon-logo-mail:before {
   content: "\e901";
 }
+.icon-logo-mail:hover {
+  color: #e9465f;
+}
+
 .icon-logo-medium:before {
   content: "\e902";
 }
+.icon-logo-medium:hover {
+  color: #e9465f;
+}
+
 .icon-logo-phone:before {
   content: "\e903";
 }
+
+.icon-logo-phone:hover {
+  color: #e9465f;
+}
+
 .icon-logo-cv:before {
   content: "\e904";
 }
+.icon-logo-cv:hover {
+  color: #e9465f;
+}
+
+
 
 /* COPIADO DEL CODEPEN  */
 
@@ -349,15 +434,43 @@ strong {
   font-weight: 700;
 }
 
+.mousey {
+  width: 3px;
+  padding: 5px 10px;
+  height: 30px;
+  background-color: #263366d9;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+
+.scroller {
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: white;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0px); opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0;}
+}
+
+
 .footer-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 footer {
-  background-color: #e9465f;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  background-color:#29254F;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 footer div p {
@@ -387,23 +500,30 @@ footer div p {
 
 .logo {
   width: 100%;
-  max-width: 90px;
+  max-width: 50px;
 }
+
+.logo:hover {
+  width: 100%;
+  max-width: 50px;
+  
+}
+
 .logo-static {
   width: 100%;
-  max-width: 90px;
+  max-width: 50px;
   position: absolute;
   background: white;
 }
 .logo-hover {
   width: 100%;
-  max-width: 90px;
+  max-width: 50px;
   opacity: 0;
 }
 
 .nav-bar-andy {
   z-index: 10;
-  background-color: white;
+  background-color: #e9465f;
 }
 
 .bg-transparent{
@@ -412,26 +532,53 @@ footer div p {
 
 .nav-item-link {
   cursor: pointer;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5) !important ;
+  font-size: 13px;
+  color: #fff !important ;
   transition: color 0.2s;
+  font-weight: 500;
+  letter-spacing: 1px;
+
 }
 
 .nav-item-link:hover {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 1) !important  ;
+  font-size: 13px;
+  color: #29254F !important;
+  text-decoration: none;
+  font-weight: 700;
+
+}
+
+
+
+.home-content {
+  width: 400px;
 }
 
 .home-content h2 {
   font-size: 8rem;
   font-weight: 900;
   letter-spacing: 10px;
-  color: #263366;
+  color: #29254F;
 }
 
 #intro-text4 {
-  font-size: 6rem;
+  font-size: 50px;
+  color:#f0b206 ;
 }
+#intro-text3 {
+  color: #1E1B32;
+  font-size: 4rem;
+}
+#intro-text2 {
+  color: #e9465f;
+  font-size: 4rem;
+}
+
+#intro-text1 {
+  color: #29254F;
+  font-size: 4rem;
+}
+
 
 .home-content h1 {
   font-size: 1.8rem;
@@ -449,10 +596,13 @@ footer div p {
 }
 
 #section-home {
-  background: url("../img/background-home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.home-image {
+  max-height: 600px;
 }
 
 /* MEDIDAS BY ME*/
@@ -492,14 +642,19 @@ footer div p {
 
 /* ABOUT ME */
 
+
+.decoration-none:hover {
+  text-decoration: none;
+}
+
 .contact-content h2 {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 900;
-  color: #263366;
+  color: #29254F;
 }
 
 .contact-content p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: ;
 }
@@ -507,13 +662,13 @@ footer div p {
 .sobre-botones {
   font-size: 12px;
   font-weight: 300;
-  color: #263366;
+  color: #29254F;
   text-align: center;
   margin-top: 0%;
 }
 
 .technoligies {
-  max-width: 700px;
+  max-width: 400px;
   width: 100%;
   left: 0;
   margin-top: 8px;
@@ -521,11 +676,12 @@ footer div p {
 
 .contact-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .paragraph-contact {
   font-size: 14px;
+  text-align: left;
 }
 
 /* BOTONES ------------------------------------ */
@@ -548,13 +704,23 @@ footer div p {
   color: white;
 }
 
+#header-gea{
+  background: url("../img/works/portada-gea.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
 .linear-custom-button {
+  cursor: pointer;
   background-color: transparent;
-  border: 2px solid #263366;
+  border: 2px solid #29254F;
   border-radius: 50px;
-  color: #263366;
-  letter-spacing: 3px;
+  color: #29254F;
+  letter-spacing: 2px;
   font-size: 11px;
+  font-weight: 700;
   padding: 12px 30px;
   transition: 0.3s;
   outline: none;
@@ -565,7 +731,7 @@ footer div p {
 
 .linear-custom-button:hover {
   background-color: #263366;
-  color: white;
+  color: white !important;
 }
 
 .bg-pink-custom-button {
@@ -574,16 +740,20 @@ footer div p {
   border-radius: 50px;
   background: #e9465f;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 11px;
   padding: 12px 30px;
   transition: 0.3s;
   outline: none;
+  font-weight: 700;
 }
 
 .bg-pink-custom-button:hover {
-  background-color: #e9465f;
+  background-color: #29254F;
+  border: 2px solid #29254F;
   color: white;
+  font-weight: 700;
+  text-decoration: none
 }
 
 
@@ -606,7 +776,7 @@ footer div p {
 .side-nav{
   top:0;
   right: 0;
-  background-color: #273366;
+  background-color:rgb(35, 28, 59);
   height: 100vh;
   position: absolute !important;
   max-width: 320px !important;
@@ -619,7 +789,7 @@ footer div p {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: #2a366d;
+  background-color:rgb(50, 39, 92);
   margin-left: -70px;
   -webkit-box-shadow: 15px 15px 0px 1px rgba(255,255,255,1);
   -moz-box-shadow: 15px 15px 0px 1px rgba(255,255,255,1);
@@ -630,6 +800,8 @@ footer div p {
 .text-content-sidenav p{
   font-size: 12px;
 }
+
+
 
 .project-card{
   max-width: 300px !important;
@@ -733,6 +905,14 @@ footer div p {
   }
 }
 @media (max-width: 992px) {
+
+  .close-modal-icon{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    margin-top: -45px;
+    font-size: 27px;
+  }
   .project-card{
     max-width: 300px !important;
     height: 200px; 
@@ -823,6 +1003,9 @@ footer div p {
 }
 
 @media (max-width: 825px) {
+  .home-image{
+    display: none;
+  }
   .loader-texto-p {
     font-size: 40px;
   }
@@ -835,14 +1018,18 @@ footer div p {
 @media (max-width: 1400px) {
   .trabajos-cuadro-descripcion {
     font-size: 14px;
+  
   }
 
+ 
   .trabajos-cuadro-categoria {
     font-size: 12px;
+ 
   }
 
   .trabajos-cuadro-titulo {
-    font-size: 36px;
+    font-size: 32px;
+
   }
 
   .trabajos-info-izquierda {
@@ -856,6 +1043,7 @@ footer div p {
 }
 
 @media (max-width: 480px) {
+ 
   .footer-flex {
     display: flex;
     flex-direction: column;
@@ -874,7 +1062,7 @@ footer div p {
     margin-top: 20px;
   }
   #intro-text1,#intro-text2,#intro-text3,#intro-text4{
-    font-size: 60px;
+    font-size: 48px;
   }
   .trabajos-principal {
     width: 880px;
